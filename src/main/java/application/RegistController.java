@@ -52,17 +52,18 @@ public class RegistController implements Initializable {
 	@FXML // fx:id="lastname"
 	private TextField lastname; // Value injected by FXMLLoader
 
-	public void setimage(Image im) {
-		image.setImage(im);
-	}
+	//public void setimage(Image im) {
+		//image.setImage(im);
+	//}
 
 	@FXML
-	void back(ActionEvent event) throws IOException {
+	void back(ActionEvent event) throws IOException 
+	{
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("HomePage.fxml"));
 		AnchorPane root = (AnchorPane) loader.load();
 		HomePageController home = loader.getController();
-		Image im = new Image("images/pink.jpg");
-		home.setimage(im);
+		//Image im = new Image("images/pink.jpg");
+		//home.setimage(im);
 		Scene regist = new Scene(root);
 		Stage app_stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		app_stage.setScene(regist);
